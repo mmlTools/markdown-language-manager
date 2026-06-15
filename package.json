@@ -1,0 +1,368 @@
+{
+  "name": "markdown-language-manager",
+  "displayName": "Markdown Language Manager",
+  "description": "Complete markdown language management: interactive floating toolbar, live preview, intelligent code completion, and syntax insights for .md files.",
+  "version": "1.1.0",
+  "publisher": "markdown-language-manager",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other",
+    "Formatters"
+  ],
+  "keywords": [
+    "markdown",
+    "editor",
+    "toolbar",
+    "preview",
+    "completion",
+    "language"
+  ],
+  "activationEvents": [
+    "onLanguage:markdown",
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "markdownManager.bold",
+        "title": "Bold",
+        "category": "Markdown Manager"
+      },
+      {
+        "command": "markdownManager.italic",
+        "title": "Italic",
+        "category": "Markdown Manager"
+      },
+      {
+        "command": "markdownManager.boldItalic",
+        "title": "Bold + Italic",
+        "category": "Markdown Manager"
+      },
+      {
+        "command": "markdownManager.strikethrough",
+        "title": "Strikethrough",
+        "category": "Markdown Manager"
+      },
+      {
+        "command": "markdownManager.highlight",
+        "title": "Highlight",
+        "category": "Markdown Manager"
+      },
+      {
+        "command": "markdownManager.inlineCode",
+        "title": "Inline Code",
+        "category": "Markdown Manager"
+      },
+      {
+        "command": "markdownManager.superscript",
+        "title": "Superscript",
+        "category": "Markdown Manager"
+      },
+      {
+        "command": "markdownManager.subscript",
+        "title": "Subscript",
+        "category": "Markdown Manager"
+      },
+      {
+        "command": "markdownManager.underline",
+        "title": "Underline",
+        "category": "Markdown Manager"
+      },
+      {
+        "command": "markdownManager.h1",
+        "title": "Heading 1",
+        "category": "Markdown Manager"
+      },
+      {
+        "command": "markdownManager.h2",
+        "title": "Heading 2",
+        "category": "Markdown Manager"
+      },
+      {
+        "command": "markdownManager.h3",
+        "title": "Heading 3",
+        "category": "Markdown Manager"
+      },
+      {
+        "command": "markdownManager.h4",
+        "title": "Heading 4",
+        "category": "Markdown Manager"
+      },
+      {
+        "command": "markdownManager.h5",
+        "title": "Heading 5",
+        "category": "Markdown Manager"
+      },
+      {
+        "command": "markdownManager.h6",
+        "title": "Heading 6",
+        "category": "Markdown Manager"
+      },
+      {
+        "command": "markdownManager.blockquote",
+        "title": "Blockquote",
+        "category": "Markdown Manager"
+      },
+      {
+        "command": "markdownManager.codeBlock",
+        "title": "Code Block",
+        "category": "Markdown Manager"
+      },
+      {
+        "command": "markdownManager.horizontalRule",
+        "title": "Horizontal Rule",
+        "category": "Markdown Manager"
+      },
+      {
+        "command": "markdownManager.details",
+        "title": "Details / Summary",
+        "category": "Markdown Manager"
+      },
+      {
+        "command": "markdownManager.unorderedList",
+        "title": "Bullet List",
+        "category": "Markdown Manager"
+      },
+      {
+        "command": "markdownManager.orderedList",
+        "title": "Ordered List",
+        "category": "Markdown Manager"
+      },
+      {
+        "command": "markdownManager.taskList",
+        "title": "Task List",
+        "category": "Markdown Manager"
+      },
+      {
+        "command": "markdownManager.link",
+        "title": "Insert Link",
+        "category": "Markdown Manager"
+      },
+      {
+        "command": "markdownManager.image",
+        "title": "Insert Image",
+        "category": "Markdown Manager"
+      },
+      {
+        "command": "markdownManager.table",
+        "title": "Insert Table",
+        "category": "Markdown Manager"
+      },
+      {
+        "command": "markdownManager.footnote",
+        "title": "Footnote",
+        "category": "Markdown Manager"
+      },
+      {
+        "command": "markdownManager.mathInline",
+        "title": "Inline Math",
+        "category": "Markdown Manager"
+      },
+      {
+        "command": "markdownManager.mathBlock",
+        "title": "Block Math",
+        "category": "Markdown Manager"
+      },
+      {
+        "command": "markdownManager.toc",
+        "title": "Table of Contents",
+        "category": "Markdown Manager"
+      },
+      {
+        "command": "markdownManager.calloutNote",
+        "title": "Callout: Note",
+        "category": "Markdown Manager"
+      },
+      {
+        "command": "markdownManager.calloutTip",
+        "title": "Callout: Tip",
+        "category": "Markdown Manager"
+      },
+      {
+        "command": "markdownManager.calloutWarning",
+        "title": "Callout: Warning",
+        "category": "Markdown Manager"
+      },
+      {
+        "command": "markdownManager.calloutImportant",
+        "title": "Callout: Important",
+        "category": "Markdown Manager"
+      },
+      {
+        "command": "markdownManager.calloutCaution",
+        "title": "Callout: Caution",
+        "category": "Markdown Manager"
+      },
+      {
+        "command": "markdownManager.showPreview",
+        "title": "Show Live Preview",
+        "category": "Markdown Manager",
+        "icon": "$(preview)"
+      },
+      {
+        "command": "markdownManager.showToolbar",
+        "title": "Show Toolbar",
+        "category": "Markdown Manager",
+        "icon": "$(tools)"
+      },
+      {
+        "command": "markdownManager.wordCount",
+        "title": "Show Word Count",
+        "category": "Markdown Manager"
+      },
+      {
+        "command": "markdownManager.formatDocument",
+        "title": "Format Document",
+        "category": "Markdown Manager"
+      },
+      {
+        "command": "markdownManager.toolbar.moveToEditor",
+        "title": "Move Toolbar to Editor Panel",
+        "category": "Markdown Manager"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "markdownManager.bold",
+        "key": "ctrl+b",
+        "when": "editorTextFocus && editorLangId == markdown"
+      },
+      {
+        "command": "markdownManager.italic",
+        "key": "ctrl+i",
+        "when": "editorTextFocus && editorLangId == markdown"
+      },
+      {
+        "command": "markdownManager.inlineCode",
+        "key": "ctrl+`",
+        "when": "editorTextFocus && editorLangId == markdown"
+      },
+      {
+        "command": "markdownManager.link",
+        "key": "ctrl+shift+k",
+        "when": "editorTextFocus && editorLangId == markdown"
+      },
+      {
+        "command": "markdownManager.showPreview",
+        "key": "ctrl+alt+p",
+        "when": "editorLangId == markdown"
+      },
+      {
+        "command": "markdownManager.showToolbar",
+        "key": "ctrl+alt+m",
+        "when": "editorLangId == markdown"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "markdownManagerContainer",
+          "title": "Markdown Manager",
+          "icon": "media/icon.svg"
+        }
+      ],
+      "panel": [
+        {
+          "id": "markdownManagerPanel",
+          "title": "Markdown",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "markdownManagerContainer": [
+        {
+          "type": "webview",
+          "id": "markdownManager.toolbar",
+          "name": "Markdown Toolbar"
+        }
+      ],
+      "markdownManagerPanel": [
+        {
+          "type": "webview",
+          "id": "markdownManager.panelToolbar",
+          "name": "Markdown Toolbar"
+        }
+      ]
+    },
+    "menus": {
+      "editor/title": [
+        {
+          "command": "markdownManager.showPreview",
+          "when": "editorLangId == markdown",
+          "group": "navigation@1"
+        },
+        {
+          "command": "markdownManager.showToolbar",
+          "when": "editorLangId == markdown",
+          "group": "navigation@2"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "markdownManager.showPreview",
+          "when": "editorLangId == markdown"
+        },
+        {
+          "command": "markdownManager.showToolbar",
+          "when": "editorLangId == markdown"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Markdown Language Manager",
+      "properties": {
+        "markdownManager.autoShowToolbar": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically focus the Markdown Manager toolbar when a .md file is opened."
+        },
+        "markdownManager.enableCompletion": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable intelligent markdown code completion suggestions."
+        },
+        "markdownManager.enableHover": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable hover information for markdown syntax elements."
+        },
+        "markdownManager.autoPreview": {
+          "type": "boolean",
+          "default": false,
+          "description": "Automatically open the live preview when a markdown file is opened."
+        }
+      }
+    }
+  },
+  "icon": "media/icon.png",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_GITHUB_USERNAME/markdown-language-manager"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_GITHUB_USERNAME/markdown-language-manager/issues"
+  },
+  "homepage": "https://github.com/YOUR_GITHUB_USERNAME/markdown-language-manager#readme",
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/marked": "^4.3.2",
+    "@types/node": "^18.0.0",
+    "@types/vscode": "^1.74.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "marked": "^4.3.0"
+  }
+}
